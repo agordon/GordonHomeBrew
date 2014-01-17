@@ -5,7 +5,8 @@ class Libee < Formula
   url 'http://www.libee.org/download/files/download/libee-0.4.1.tar.gz'
   sha1 '06bcd1be5c60e60a1e8d9a5844b3e9edc76b14e3'
 
-  depends_on 'libestr'
+  # 'libestr' in the main homebrew is too old - use this custom one.
+  depends_on 'agordon/gordon/libestr'
 
   def install
     ENV.j1

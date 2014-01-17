@@ -6,7 +6,8 @@ class Rsyslogd < Formula
   sha256 '38a8b5be53feaae9225e46f2c93d7cc87954ead58ac9526ffc63de71f3d4a542'
 
   depends_on 'libee'
-  depends_on 'libestr'
+  # 'libestr' in the main homebrew is too old - use this custom one.
+  depends_on 'agordon/gordon/libestr'
   depends_on 'librelp'
   depends_on 'liblognorm'
   depends_on 'libjsonc'
