@@ -31,8 +31,8 @@ class GordonBinScripts < Formula
       end
       ohai "Detected Git version = #{prog_version}"
       system "echo '#{prog_version}' > .tarball-version"
+      system 'sh', './bootstrap.sh'
     end
-    system 'sh', './bootstrap.sh'
     system './configure', "--prefix=#{prefix}"
     system 'make'
     system 'make', 'install'
