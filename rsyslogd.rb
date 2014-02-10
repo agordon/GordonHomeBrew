@@ -5,12 +5,15 @@ class Rsyslogd < Formula
   url 'http://www.rsyslog.com/files/download/rsyslog/rsyslog-7.5.8.tar.gz'
   sha256 '38a8b5be53feaae9225e46f2c93d7cc87954ead58ac9526ffc63de71f3d4a542'
 
-  depends_on 'libee'
+  # Remove dependacies for now, as they causes conflicts
+  # (e.g. the default 'libee' in HomeBrew requires XQuarts MAC package).
+  #
+  # depends_on 'libee'
   # 'libestr' in the main homebrew is too old - use this custom one.
-  depends_on 'agordon/gordon/libestr'
-  depends_on 'librelp'
-  depends_on 'liblognorm'
-  depends_on 'libjsonc'
+  # depends_on 'agordon/gordon/libestr'
+  # depends_on 'librelp'
+  # depends_on 'liblognorm'
+  # depends_on 'libjsonc'
 
   def install
     ENV.j1
