@@ -3,8 +3,8 @@ require "formula"
 class Calc < Formula
   homepage "http://agordon.github.io/calc/"
   head "https://github.com/agordon/calc.git"
-  url "https://github.com/agordon/calc/releases/download/0.98.0/calc-0.98.0.tar.gz"
-  sha1 "31882d3c42f5319c594302be53f56bcb5dec7556"
+  url "https://s3.amazonaws.com/agordon/calc/src/calc-1.0.0.tar.gz"
+  sha1 "507ffbd88d6d8edce1bab389b9a74eee3b7cf930"
 
   if build.head?
     depends_on :autoconf => :build
