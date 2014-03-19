@@ -4,7 +4,7 @@ class Compute < Formula
   homepage "http://agordon.github.io/compute/"
   head "https://github.com/agordon/compute.git"
   url "https://github.com/agordon/compute/releases/download/v1.0.3/compute-1.0.3.tar.gz"
-  sha1 "ebf33934f18dd5afb48363e16cd44410f8d629b3"
+  sha1 "d61f5c4db955c93b3eaffdc80ee5ee4d21a690ab"
 
   if build.head?
     depends_on :autoconf => :build

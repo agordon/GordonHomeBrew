@@ -2,8 +2,8 @@ require 'formula'
 
 class Rsyslogd < Formula
   homepage 'http://www.rsyslog.com'
-  url 'http://www.rsyslog.com/files/download/rsyslog/rsyslog-7.5.8.tar.gz'
-  sha256 '38a8b5be53feaae9225e46f2c93d7cc87954ead58ac9526ffc63de71f3d4a542'
+  url 'http://www.rsyslog.com/download/files/download/rsyslog/rsyslog-7.6.0.tar.gz'
+  sha256 'c40da756369dbb560b26f5baab5bdbdf25f728c74c32e9ae28a1888f376020a0'
 
   # Remove dependacies for now, as they causes conflicts
   # (e.g. the default 'libee' in HomeBrew requires XQuarts MAC package).
