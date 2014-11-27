@@ -6,6 +6,8 @@ class Lobstr < Formula
   sha1 "75a475d4673bace7378728337790e6f37eb04178"
   head 'https://github.com/mgymrek/lobstr-code', :using => :git
 
+  option "without-check", "Disable build-time checking (not recommended)"
+
   if build.head?
     depends_on :autoconf => :build
     depends_on :automake => :build
@@ -23,7 +25,7 @@ class Lobstr < Formula
     system './configure', "--prefix=#{prefix}",
                           '--disable-dependency-tracking'
     system 'make'
-    system 'make', 'check'
+    system 'make', 'check' if build.with? "check"
     system 'make', 'install'
   end
 
