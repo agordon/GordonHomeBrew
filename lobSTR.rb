@@ -20,7 +20,8 @@ class Lobstr < Formula
     if build.head?
       system 'sh', './reconf'
     end
-    system './configure', "--prefix=#{prefix}"
+    system './configure', "--prefix=#{prefix}",
+                          '--disable-dependency-tracking'
     system 'make'
     system 'make', 'check'
     system 'make', 'install'
