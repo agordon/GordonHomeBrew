@@ -30,7 +30,7 @@ class Lobstr < Formula
   end
 
   test do
-    system "#{prefix}/share/lobSTR/scripts/lobSTR_test_run.sh"
+    system "#{share}/lobSTR/scripts/lobSTR_test_run.sh"
     assert $?.success?
   end
 end
