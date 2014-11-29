@@ -30,7 +30,15 @@ class Lobstr < Formula
   end
 
   test do
-    system "#{share}/lobSTR/scripts/lobSTR_test_run.sh"
-    assert $?.success?
+    mktemp do
+      system "#{bin}/lobSTR",
+               "--verbose",
+               "--index-prefix", "#{share}/lobSTR/test-ref/lobSTR_",
+               "--fastq", "-f", "#{share}/sample/tiny.fq",
+               "--rg-sample", "test",
+               "--rg-lib", "test",
+               "--out", "./test"
+      assert $?.success?
+    end
   end
 end
