@@ -2,8 +2,8 @@ require 'formula'
 
 class Lobstr < Formula
   homepage 'http://lobstr.teamerlich.org'
-  url "http://erlichlab.wi.mit.edu/lobSTR/lobSTR-3.0.2.tar.gz"
-  sha1 "75a475d4673bace7378728337790e6f37eb04178"
+  url "http://erlichlab.wi.mit.edu/lobSTR/lobSTR-3.0.3.tar.gz"
+  sha1 "1f1578e9d1c36eb7268037c977204152f5022361"
   head 'https://github.com/mgymrek/lobstr-code', :using => :git
 
   option "without-check", "Disable build-time checking (not recommended)"
@@ -30,7 +30,7 @@ class Lobstr < Formula
   end
 
   test do
-    system '#{bin}/lobSTR', "--version"
+    system "#{prefix}/share/lobSTR/scripts/lobSTR_test_run.sh"
     assert $?.success?
   end
 end
